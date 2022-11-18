@@ -34,8 +34,7 @@ Casting is one of the most crucial parts of the filmmaking process; choosing the
 <!---
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 -->
-- [CMU Movie Summary Corpus dataset](http://www.cs.cmu.edu/~ark/personas/): dataset that contains the metadata for 81,741 movies and 450,669 characters aligned to them, extracted from the November 4, 2012 dump of Freebase and the movie plot summaries extracted from the
-November 2, 2012 dump of English-language Wikipedia for 42,306 of those movies.
+- [CMU Movie Summary Corpus dataset](http://www.cs.cmu.edu/~ark/personas/): dataset that contains the metadata for 81,741 movies and 450,669 characters aligned to them, extracted from the November 4, 2012 dump of Freebase and the movie plot summaries extracted from the November 2, 2012 dump of English-language Wikipedia for 42,306 of those movies.
 - [CMU Movie Summary Corpus supplement](http://www.cs.cmu.edu/~ark/personas/): supplement to the previous dataset, that contains ll of the plot summaries from above, run through the Stanford CoreNLP pipeline (tagging, parsing, NER and coref).
 - [Oscar Awards dataset](https://www.kaggle.com/datasets/unanimad/the-oscar-award): dataset that contains past Academy Award winners and nominees between 1927 and 2018. 
 - [IMDB dataset](https://www.imdb.com/interfaces/): dataset that contains the names of the movies on IMDB alongside their average rating and the number of votes. 
@@ -44,15 +43,11 @@ November 2, 2012 dump of English-language Wikipedia for 42,306 of those movies.
 
 > Does hiring the best actors guarantee a successful movie?
 
-As it is hard to quantify how good an actor is at doing their job, we choose to base this definition on whether or not the actor was awarded an Oscar by the Academy of Motion Picture Arts and Sciences, as this represents the opinion of other professionals in the field. We define a movie to be successful if it has a high rating by the general audience and the critics. 
-After (pre-processing?) the data, we investigate how good of an indicator having a successful actor is for a movie to be successful. 
+As it is hard to quantify how good an actor is at doing their job, we choose to base this definition on whether or not the actor was awarded an Oscar by the Academy of Motion Picture Arts and Sciences, as this represents the opinion of other professionals in the field. We define a movie to be successful if it has a high rating by the general audience and the critics. After (merging?) the data, we investigate how good of an indicator having a successful actor is for a movie to be successful. 
 
 > Do the best actors play the same roles over and over again?
 
-We investigate the previous roles  of the actors from the [original] dataset who were nominated or have won an Oscar to determine if they typically choose more similar or less similar roles than other actors.
-To learn the personas of the characters the actors have played, we follow the method used in the paper (ref) “Learning Latent Personas of Film Characters”; we use the structured representation of the plot summaries output from the Stanford CoreNLP to extract linguistic features for each character (agent verbs, patient verbs, attributes). We then do a soft clustering over words to topics, a soft clustering over topics to personas and a hard clustering over characters to personas. 
-
-Once we have the personas of the characters that actors have played, we define a similarity measure between the different personas and we investigate whether a correlation (or anticorrelation) exists between being a successful actor and playing similar characters.
+We investigate the previous roles of the actors from the CMU Movie Summary Corpus dataset who were nominated or have won an Oscar to determine if they typically choose more similar or less similar roles than other actors. To learn the personas of the characters the actors have played, we follow the method used in the paper [“Learning Latent Personas of Film Characters”](http://www.cs.cmu.edu/~dbamman/pubs/pdf/bamman+oconnor+smith.acl13.pdf); we use the structured representation of the plot summaries output from the Stanford CoreNLP to extract linguistic features for each character (agent verbs, patient verbs, attributes). We then do a soft clustering over words to topics, a soft clustering over topics to personas and a hard clustering over characters to personas. Once we have the personas of the characters that actors have played, we define a similarity measure between the different personas and we investigate whether a correlation (or anticorrelation) exists between being a successful actor and playing similar characters.
 
 > How can you pick the most appropriate actor for your movie?
 
