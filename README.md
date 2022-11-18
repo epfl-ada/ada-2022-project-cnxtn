@@ -35,7 +35,7 @@ Casting is one of the most crucial parts of the filmmaking process; choosing the
 List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 -->
 - [CMU Movie Summary Corpus dataset](http://www.cs.cmu.edu/~ark/personas/): dataset that contains the metadata for 81,741 movies and 450,669 characters aligned to them, extracted from the November 4, 2012 dump of Freebase and the movie plot summaries extracted from the November 2, 2012 dump of English-language Wikipedia for 42,306 of those movies.
-- [CMU Movie Summary Corpus supplement](http://www.cs.cmu.edu/~ark/personas/): supplement to the previous dataset, that contains ll of the plot summaries from above, run through the Stanford CoreNLP pipeline (tagging, parsing, NER and coref).
+- [CMU Movie Summary Corpus supplement](http://www.cs.cmu.edu/~ark/personas/): supplement to the previous dataset, that contains the plot summaries from above, run through the Stanford CoreNLP pipeline (tagging, parsing, NER and coref).
 - [Oscar Awards dataset](https://www.kaggle.com/datasets/unanimad/the-oscar-award): dataset that contains past Academy Award winners and nominees between 1927 and 2018. 
 - [IMDB dataset](https://www.imdb.com/interfaces/): dataset that contains the names of the movies on IMDB alongside their average rating and the number of votes. 
   
@@ -43,7 +43,7 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 > Does hiring the best actors guarantee a successful movie?
 
-As it is hard to quantify how good an actor is at doing their job, we choose to base this definition on whether or not the actor was awarded an Oscar by the Academy of Motion Picture Arts and Sciences, as this represents the opinion of other professionals in the field. We define a movie to be successful if it has a high rating by the general audience and the critics. After (merging?) the data, we investigate how good of an indicator having a successful actor is for a movie to be successful. 
+As it is hard to quantify how good an actor is at doing their job, we choose to base this definition on whether or not the actor was awarded an Oscar by the Academy of Motion Picture Arts and Sciences, as this represents the opinion of other professionals in the field. We define a movie to be successful if it has a high rating by the general audience and the critics. After merging the data, we investigate how good of an indicator having a successful actor is for a movie to be successful. 
 
 > Do the best actors play the same roles over and over again?
 
@@ -55,7 +55,20 @@ A first step is to filter the potential actors by the constraints on the metadat
 
 
 ## Proposed timeline
+20/11: RQ1 answer 
+20/11: parsing the CoreNLP output
+21/11: generating the personas (2x soft clustering + hard clustering)
+27/11: finalizing the latent personas model
+29/11: defining a similarity measure
+2/12: RQ2 answer
+7/12: model for casting actors
+9/12: RQ3 answer
+15/12: data story
+21/12: update readme with details
 
 
 ## Organization within the team: 
-A list of internal milestones up until project Milestone P3.
+Farah: RQ2, data story
+Raed: RQ2, data story
+Lin: RQ3, data story
+Nana: RQ1, data story
