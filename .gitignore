@@ -2,3 +2,5 @@ fb2w.nt
 *.gz
 *.tsv
 *.txt
+corenlp_plot_summaries/277666.xml
+corenlp_plot_summaries/.DS_Store
