@@ -44,7 +44,7 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 > Does hiring the best actors guarantee a successful movie?
 
 As it is hard to quantify how good an actor is at doing their job, we choose to base this definition on whether or not the actor was awarded an Oscar by the Academy of Motion Picture Arts and Sciences, as this represents the opinion of other professionals in the field. We define a movie to be successful if it has a high rating by the general audience and the critics. 
-We do a matched analysis comparing the actors who have won an Oscar, with actors that have not been nominated. To make matches more comparable, we consider pairs who have the same (…). After doing a 1-1 matching, we use linear regression model to estimate the effect of having won an Oscar in the final movie rating, which we find to be positive and quite significant.
+We do a matched analysis comparing the actors who have won an Oscar, with actors that have not been nominated. To make matches more comparable, we consider pairs who have the same movie countries,languages and release era. After doing a 1-1 matching, we use linear regression model to estimate the effect of having won an Oscar in the final movie rating, which we find to be positive and quite significant.
 
 > Do the best actors play the same roles over and over again?
 
