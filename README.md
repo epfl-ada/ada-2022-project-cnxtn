@@ -7,6 +7,9 @@ author: 'A. Ben Mustapha, F. Briki, Y. Lin, N. Tian'
 ## Can the Process of Casting Actors Be Automated?
 <br>
 
+## Data Story: 
+The Data story can be found [here](https://farahbriki.github.io/ADA-CNxTN/#section1).
+
 ## Abstract
 Casting is the process of selecting actors who will play various characters in a movie. Typically, a casting director is hired to find the best possible talent for the roles and present these options to the directors and producers who then make their final casting decisions. Casting is one of the most crucial parts of the filmmaking process; choosing the actors can make or break a film. Choosing the wrong actor might diminish a particular character’s believability, which would affect negatively the movie. However, even the best casting directors have a certain bias from their experience in the industry; this can come from their previous interactions with actors (or lack thereof). This project aims to predict how successful an actor would be if they were cast in a specific role. This allows to rank the actors by the most appropriate for the role to the least appropriate, which would serve as casting suggestions to the directors and producers. 
 
