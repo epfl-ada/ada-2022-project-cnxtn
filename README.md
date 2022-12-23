@@ -52,7 +52,7 @@ We investigate the previous roles of the actors from the CMU Movie Summary Corpu
 To learn the personas of the characters the actors have played, we were inspired by the method used in the paper [“Learning Latent Personas of Film Characters”](http://www.cs.cmu.edu/~dbamman/pubs/pdf/bamman+oconnor+smith.acl13.pdf); we use the structured representation of the plot summaries output from the Stanford CoreNLP to extract linguistic features for each character (agent verbs, patient verbs, attributes). We cluster the bag of words to personas.
 After defining the personas, we do a matched analysis comparing the actors who have won an Oscar, with actors that have not been nominated. We use linear regression model to estimate the effect of having won an Oscar in the ratio of the total roles played that have the same persona as their maximum occurrence persona, which we find to be positive and quite significant; an Oscar award winner is plays on average two times as much their maximum occurrence persona. 
 
-[PART B OF RQ2 !!!!]
+Additionally, we investigate the effect of having played the same role before directly in the movie rating. We do a matched analysis comparing the actors who have played the role before, with actors that have not. We use linear regression model to estimate the effect of having played the role before in the final movie rating. The results of this analysis are inconclusive.
 
 > How can you pick the most appropriate actor for your movie?
 
@@ -60,6 +60,16 @@ In order to predict how successful picking a specific actor for your movie is, w
 To pick which features should or shouldn’t go into the model, we use forward feature selection.
 The model can then be used by specifying the persona of the role we want to cast for, as well as any important metadata (e.g. gender or ethnicity). We filter the list of actors by the necessary metadata constraints and calculate the relevant additional features that comes from the persona of the role (e.g. the number of previous roles the actor has played that fit into the relevant persona). We then predict the final movie rating for each actor that fits into the metadata constraints using the model previously mentioned, and sort in decreasing order.
 
+## External libraries
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- xml
+- statsmodels
+- networkx
+- sklearn
+- plotly
 
 ## The CNxTN team contributions: 
 Farah: Generating bag of words from NLP output in RQ2, RQ3, Datastory
